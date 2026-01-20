@@ -1,0 +1,6 @@
+dataset/*
+
+!dataset/data_readme.md
+!dataset/WT.zip
+!dataset/WIT.zip
+
