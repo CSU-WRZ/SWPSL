@@ -103,6 +103,8 @@ void DeleteEdge::weightChangeErrorLabel_v2() {
     }
 #endif
 
+
+#ifndef DELETE_CHCEK
     int old_dis = INF;
     vector<pair<int, int>> commonHub; // store i j
     auto &left = label[ID1], &right = label[ID2];
@@ -133,6 +135,21 @@ void DeleteEdge::weightChangeErrorLabel_v2() {
         need_to_delete[ID1].push_back(i);
       }
     }
+
+#else
+    int old_dis = INF;
+    auto &left = label[ID1];
+    for (int i = 0; i < left.size(); ++i) {
+      int hub1 = left[i].hub;
+      if (hub1 == ID2&&left[i].step == 1) { //add step == 1 check
+#pragma omp critical
+        {
+          need_to_delete[ID1].push_back(i);
+        }
+        break;
+      }
+    }
+#endif    
   
   }
 
