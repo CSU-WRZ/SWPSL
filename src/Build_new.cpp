@@ -333,7 +333,7 @@ void Build::removeRedundantLabel() {
       if (left[i].dis < nodeID_label_dis[left[i].hub]) {
         nodeID_label_dis[left[i].hub] = left[i].dis;
       }
-      nodeID_label_dis[left[i].hub] = left[i].dis;
+      // nodeID_label_dis[left[i].hub] = left[i].dis;
     }
 
     for (int j = 0; j < label[ID1].size(); j++) {
@@ -416,7 +416,7 @@ void Build::removeRedundantLabel(int topK) {
       if (left[i].dis < nodeID_label_dis[left[i].hub]) {
         nodeID_label_dis[left[i].hub] = left[i].dis;
       }
-      nodeID_label_dis[left[i].hub] = left[i].dis;
+      // nodeID_label_dis[left[i].hub] = left[i].dis;
     }
 
     for (int j = 0; j < label[ID1].size(); j++) {
