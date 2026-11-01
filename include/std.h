@@ -25,8 +25,8 @@ const int INF = 0x3f3f3f3f;
 using namespace std;
 
 /* 【1】. Increase.cpp and Delete.cpp*/
-#define DIJKSTRA
-// #define DELETE_CHCEK // further simplified deletion check
+// #define DIJKSTRA
+#define DELETE_CHCEK // further simplified deletion check
 
 /* 【2】. Decrease2.cpp Insert.cpp*/
 #define USING_NEW_ADD_LABLE_CHECK // 
